@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タクシーデータヒートマップ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        main {
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .input-section {
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>タクシーデータヒートマップ</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <p class="description">
+                このページでは、タクシーの乗降データを元にヒートマップを作成し、データを視覚的に解析します。<br>
+                データをアップロードするか、既存のデータセットを使用して可視化を開始してください。
+            </p>
+
+            <div class="input-section">
+                <label for="data-upload">データをアップロード:</label>
+                <input type="file" id="data-upload" accept=".csv">
+            </div>
+
+            <div class="input-section">
+                <label for="date-filter">日付でフィルタリング:</label>
+                <input type="date" id="date-filter">
+            </div>
+
+            <button class="button" id="generate-map">ヒートマップを作成</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 タクシーデータヒートマップ</p>
+    </footer>
+
+    <script>
+        document.getElementById('generate-map').addEventListener('click', function() {
+            alert('ヒートマップを作成中...');
+        });
+    </script>
+</body>
+</html>
